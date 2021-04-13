@@ -2,8 +2,9 @@
 
 WEB APP
 To run project 
-step 1: change directory to project/admin 
-step 2: npm run dev
+step 1: npm install
+step 2: change directory to project/admin 
+step 3: npm run dev
 
 MongoDB Database 
 use your credentials and login to mongodb database
@@ -25,7 +26,14 @@ Home page:
   Insert high quality images in the folder labeled_images in public folder in admin/front
   
   FLUTTER (HYBRID APP)
-  Change directory to : footage-generation-and-analysis-framework/flutter/pcam/lib/page/home_page.dart
+  
+  To run project:
+  step 1: pub get
+  step 2: Change directory to : footage-generation-and-analysis-framework/flutter/pcam/lib/page/home_page.dart
+  step 3: run
+  
+  Database used:
+  Firebase Stroge & MongoDB
   
 	
 	
