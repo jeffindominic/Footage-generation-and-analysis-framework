@@ -25,7 +25,8 @@ Home page:
   Insert high quality images in the folder labeled_images in public folder in admin/front
   
   FLUTTER (HYBRID APP)
-  Change directory to : footage-generation-and-analysis-framework/flutter/pcam/lib/page/home_page.dar
+  Change directory to : footage-generation-and-analysis-framework/flutter/pcam/lib/page/home_page.dart
+  
 	
 	
   
