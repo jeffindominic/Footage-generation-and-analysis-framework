@@ -8,7 +8,7 @@ import 'package:pcam/page/source_page.dart';
 import 'package:pcam/widget/video_widget.dart';
 import 'package:pcam/model/media_source.dart';
 import 'package:mongo_dart/mongo_dart.dart' show Db, GridFS;
-//import 'package:cloud_firestore/cloud_firestore.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,6 +16,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+//use your mongodb databse  
   final url = [
     "mongodb://intern:rajagiri@cluster0-shard-00-00.5vk1r.mongodb.net:27017/footage?replicaSet=atlas-fbzdq5-shard-0&authSource=admin&retryWrites=true&w=majority",
     "mongodb://intern:rajagiri@cluster0-shard-00-01.5vk1r.mongodb.net:27017/footage?replicaSet=atlas-fbzdq5-shard-0&authSource=admin&retryWrites=true&w=majority",
@@ -101,7 +102,7 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: new BorderRadius.circular(25.0),
                       borderSide: new BorderSide(),
                     ),
-                    //fillColor: Colors.green
+                    
                   ),
                   validator: (val) {
                     if (val.length == 0) {
@@ -127,14 +128,6 @@ class _HomePageState extends State<HomePage> {
                         color: Theme.of(context).primaryColor,
                         textColor: Colors.white,
                       ),
-                // const SizedBox(height: 24),
-                // RaisedButton(
-                //   child: Text('Capture Image'),
-                //   shape: StadiumBorder(),
-                //   onPressed: () => capture(MediaSource.image),
-                //   color: Theme.of(context).primaryColor,
-                //   textColor: Colors.white,
-                // ),
                 const SizedBox(height: 24),
                 RaisedButton(
                   child: Text('Capture Video'),
@@ -148,7 +141,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       );
-
+//media selection
   Future capture(MediaSource source) async {
     setState(() {
       this.source = source;
@@ -174,7 +167,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future uploadFile() async {
-    // StorageUploadTask uploadTask = _reference.putFile(fileMedia, StorageMetadata(contentType: 'video/mp4'));
+    
     try {
       final DateTime now = DateTime.now();
       final int millSeconds = now.millisecondsSinceEpoch;
@@ -183,7 +176,7 @@ class _HomePageState extends State<HomePage> {
       final String year = now.year.toString();
       String storageId = (stationcontroler.text + millSeconds.toString());
       final String today = ('$date-$month-$year');
-
+//saving selected file to firebase storage
       StorageTaskSnapshot snapshot = await storage
           .ref()
           .child("video")
@@ -191,8 +184,10 @@ class _HomePageState extends State<HomePage> {
           .child(storageId)
           .putFile(fileMedia)
           .onComplete;
+      //getting back the video url
       if (snapshot.error == null) {
         final String downloadUrl = await snapshot.ref.getDownloadURL();
+        //uploading the video url and details to mongodb
         Map<String, dynamic> video = {
           "_id": storageId,
           "link": downloadUrl,
@@ -217,7 +212,7 @@ class _HomePageState extends State<HomePage> {
     bucket = GridFS(_db, "video");
   }
 
-// *****succer ALERT*******************
+// SUCCESS ALERT
   showAlertDialog(BuildContext context) {
     // set up the button
     Widget okButton = FlatButton(
