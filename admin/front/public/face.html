@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer async src="./js/face-api.min.js"></script>
+    <script defer async src="./js/script.js"></script>
+    <!-- <link rel="icon" href="%PUBLIC_URL%/mainlogo.png" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Cyberdome</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;  
+            align-items: center;
+            flex-direction: column;
+        }
+        canvas{
+            position: absolute;
+            }
+/* Style the links inside the sidenav */
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 100px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#home {
+  top: 20px;
+  background-color: #4CAF50;
+}
+
+.videos{
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+            padding: 0;
+            width: 90vw;
+            height: 90vh;
+            
+}
+      
+    </style>
+     
+</head>
+
+<body>
+  
+  
+    <video  class="videos" id="videoInput" crossorigin="anonymous" width="720" height="550" controls loop></video>
+    
+    
+</body>
+<div id="mySidenav" class="sidenav">
+  <a  id="home">back</a>
+</div>
+<br/>
+</html>

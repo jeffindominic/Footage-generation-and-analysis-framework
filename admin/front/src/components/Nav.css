@@ -1,0 +1,32 @@
+nav {
+    display: flex;    
+    justify-content: space-between;
+    background-color: #002333;
+    padding: 10px 50px;
+    color: #fff;
+    height: 43px;
+}
+
+nav h2 {
+    list-style: none;
+}
+
+nav ul {
+    list-style: inline-block;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+}
+
+
+

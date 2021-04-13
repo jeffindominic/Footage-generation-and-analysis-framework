@@ -1,0 +1,2 @@
+1) cam: https://github.com/JohannesMilke/image_video_picker_example/blob/master/lib/main.dart
+2)mongo "mongodb+srv://cluster0.5vk1r.mongodb.net/footage" --username intern

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "204043322477",
+    "project_id": "pcam-7a4cb",
+    "storage_bucket": "pcam-7a4cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204043322477:android:652ca30d7b1080174ceb64",
+        "android_client_info": {
+          "package_name": "com.example.pcam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204043322477-mn72hud6mkk7ioj5ns3tlp2donmi3fi0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pcam",
+            "certificate_hash": "ae210fb9ec60ac5e30f73f3ef8ebcd754f6aaa74"
+          }
+        },
+        {
+          "client_id": "204043322477-sdds2i0bnadim4lak2i78uru75aqj3s0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlXFc90Motg1jLpdGcOiOikJ2HZV0xZd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204043322477-sdds2i0bnadim4lak2i78uru75aqj3s0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
